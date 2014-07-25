@@ -12,6 +12,6 @@ resources :posts, except: [:destroy] do
 	resources :comments, only: [:create, :show, :new]
 	
  end
-
+  
 end
 

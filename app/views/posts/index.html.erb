@@ -6,21 +6,5 @@
  <%# end %>
  </ul> 
 <% @posts.each do |post| %>
-<div class="row">
-<div class="span8 well">
-	<%= render post.categories %>
-	<h4><%= link_to post.title, post.url %></h4>
-	<h4><%= link_to 'edit', edit_post_path(post) %></h4>
-	<p><%= post.description %></p>
-	<p>
-		<span class="quiet">posted by <%= post.creator.username %></span>
-		<small><%= post.created_at %></small>
-	</p>
-	 <small>
-		<span>
-			<%= link_to("#{post.comments.size} comments", post_path(post)) %> 
-		</span>
-	 </small>	
-</div>
-</div>
+<%= render 'posts', post: post %>
 <% end %>
