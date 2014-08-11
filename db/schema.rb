@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721205411) do
+ActiveRecord::Schema.define(version: 20140731194314) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -45,8 +45,18 @@ ActiveRecord::Schema.define(version: 20140721205411) do
 
   create_table "users", force: true do |t|
     t.string   "username"
-    t.datetime "created_at", default: '2014-07-21 21:04:38'
-    t.datetime "updated_at", default: '2014-07-21 21:04:38'
+    t.datetime "created_at",      default: '2014-07-21 21:04:38'
+    t.datetime "updated_at",      default: '2014-07-21 21:04:38'
+    t.string   "password_digest"
+  end
+
+  create_table "votes", force: true do |t|
+    t.boolean  "vote"
+    t.integer  "user_id"
+    t.string   "voteable_type"
+    t.integer  "voteable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
