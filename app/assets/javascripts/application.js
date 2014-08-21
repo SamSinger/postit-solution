@@ -16,3 +16,10 @@
 //= require_tree .
 //= require bootstrap
 
+// tradition but not Rails way is below
+//$(document).ready(function(){
+//	$("a.vote_link").click(function(0 {
+//		$.ajax(type: 'post', url: 'some_url').done
+//	}))
+//})
+
