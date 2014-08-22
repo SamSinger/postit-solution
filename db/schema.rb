@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731194314) do
+ActiveRecord::Schema.define(version: 20140821211235) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at", default: '2014-07-21 21:04:38'
     t.datetime "updated_at", default: '2014-07-21 21:04:38'
+    t.string   "slug"
   end
 
   create_table "comments", force: true do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140731194314) do
     t.string   "user_id"
     t.datetime "updated_at",  default: '2014-07-21 21:04:38'
     t.datetime "created_at",  default: '2014-07-21 21:04:38'
+    t.string   "slug"
   end
 
   create_table "users", force: true do |t|
@@ -48,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140731194314) do
     t.datetime "created_at",      default: '2014-07-21 21:04:38'
     t.datetime "updated_at",      default: '2014-07-21 21:04:38'
     t.string   "password_digest"
+    t.string   "slug"
   end
 
   create_table "votes", force: true do |t|
