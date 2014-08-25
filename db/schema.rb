@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821211235) do
+ActiveRecord::Schema.define(version: 20140825141756) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20140821211235) do
     t.datetime "updated_at",      default: '2014-07-21 21:04:38'
     t.string   "password_digest"
     t.string   "slug"
+    t.string   "role"
   end
 
   create_table "votes", force: true do |t|
